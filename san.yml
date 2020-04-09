@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sampleweb
-        image: gcr.io/mystic-impulse-245222/myapp:v1
+        image: gcr.io/mystic-impulse-245222/soloo0000
 
 ---
 
