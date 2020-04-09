@@ -42,24 +42,9 @@ node {
     }
 
     stage('Deploy the dokcer base image in Kubernetes') {
-             sh 'kubectl create deployment mydep --image=gcr.io/mystic-impulse-245222/soloo0000'
+             sh 'kubectl apply -f san.yml'
     }
 
-    stage('Create a LoadBalancer Service to expose the url'){ 
-             sh 'kubectl expose deployment mydep --type=LoadBalancer --port 80 --target-port 8080'
-             sleep 120 // seconds
-    }
     
-    stage('Get Service or the External IP'){
-             sh 'kubectl get service'
-             sleep 100
-    }
-
-    stage('Delete Service') {
-              sh 'kubectl delete service mydep'
-              sleep 60
-    }
-     stage('Delete cluster'){
-            sh 'gcloud container clusters delete mycluster --zone us-central1-a --quiet'
-     }
+    
 }
