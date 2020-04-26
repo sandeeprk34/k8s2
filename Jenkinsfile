@@ -43,6 +43,7 @@ node {
 
     stage('Deploy the dokcer base image in Kubernetes') {
              sh 'kubectl apply -f san.yml'
+             sleep 120
     }
 
     
