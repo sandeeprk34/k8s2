@@ -56,7 +56,9 @@ node {
      }
     
     
-    
+    stage('Delete container images'){
+            sh ' gcloud container images delete image2 --quiet'
+     }
     
     
 }
