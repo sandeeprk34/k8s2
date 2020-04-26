@@ -46,5 +46,16 @@ node {
     }
 
     
+    stage('Delete Service') {
+              sh 'kubectl delete service myservice2'
+              sleep 60
+    }
+     stage('Delete cluster'){
+            sh 'gcloud container clusters delete mycluster2 --zone us-central1-a --quiet'
+     }
+    
+    
+    
+    
     
 }
