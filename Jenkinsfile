@@ -15,7 +15,7 @@ node {
     stage('Build dokcer base image locally') {
         /* To builds the dockerimage */
         //update your GCR registry URI
-        app = docker.build("gcr.io/mystic-impulse-245222/testapp")
+        app = docker.build("gcr.io/mystic-impulse-245222/image2")
     }
 
     stage('Test docker base image') {
