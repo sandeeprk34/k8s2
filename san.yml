@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mydeployment
+  name: mydep2
 spec:
   replicas: 3
   selector:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sampleweb
-        image: gcr.io/mystic-impulse-245222/testapp
+        image: gcr.io/mystic-impulse-245222/image2
 
 ---
 
