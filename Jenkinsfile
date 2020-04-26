@@ -57,7 +57,7 @@ node {
     
     
     stage('Delete container images'){
-            sh ' gcloud container images delete image2 --quiet'
+            sh 'gcloud container images delete gcr.io/mystic-impulse-245222/image2  --quiet'
      }
     
     
